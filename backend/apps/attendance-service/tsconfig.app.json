@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "../../dist/apps/attendance-service"
+  },
+  "include": ["src/**/*", "../../libs/**/*"]
+}

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-canvas text-ink antialiased;
+  }
+
+  body {
+    @apply min-h-screen font-sans;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-lime ring-offset-2 ring-offset-canvas;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl bg-white;
+  }
+
+  .panel-dark {
+    @apply rounded-4xl bg-ink-night text-white;
+  }
+
+  .label-caps {
+    @apply text-[10px] font-bold uppercase tracking-[0.1em] text-muted-light;
+  }
+
+  .filter-control {
+    @apply h-10 rounded-2xl bg-white px-3.5 text-xs font-medium text-body-strong outline-none;
+  }
+
+  .select-chevron {
+    @apply appearance-none bg-no-repeat pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8A86' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");
+    background-position: right 16px center;
+    background-size: 12px;
+  }
+}
